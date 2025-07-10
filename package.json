@@ -1,26 +1,20 @@
 {
-  "name": "cms-backend",
-  "version": "1.0.0",
-  "description": "Backend CMS with Node.js, Express, MongoDB, and Elasticsearch",
-  "main": "server.js",
+  "name": "cms-blog-monorepo",
+  "private": true,
+  "workspaces": [
+    "apps/backend",
+    "apps/frontend"
+  ],
   "scripts": {
-    "start": "node server.js",
-    "dev": "nodemon server.js"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "@elastic/elasticsearch": "^8.18.2",
-    "bcryptjs": "^2.4.3",
-    "cors": "^2.8.5",
-    "dotenv": "^16.4.5",
-    "express": "^4.19.2",
-    "jsonwebtoken": "^9.0.2",
-    "mongoose": "^8.4.4",
-    "slugify": "^1.6.6"
+    "dev:backend": "npm --workspace apps/backend run dev",
+    "dev:frontend": "npm --workspace apps/frontend run dev",
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\""
   },
   "devDependencies": {
-    "nodemon": "^3.1.4"
+    "concurrently": "^8.2.2"
+  },
+  "dependencies": {
+    "cloudinary": "^1.41.3",
+    "multer-storage-cloudinary": "^4.0.0"
   }
 }
