@@ -50,8 +50,8 @@ const Navbar = () => {
         gap: '2rem',
         alignItems: 'center'
       }}>
-        {['/', '/posts', '/categories', '/about', '/contact'].map((path, i) => {
-          const labels = ['Home', 'Posts', 'Categories', 'About', 'Contact'];
+        {['/', '/posts', '/about', '/contact'].map((path, i) => {
+          const labels = ['Home', 'Posts','About', 'Contact'];
           return (
             <Link
               key={path}

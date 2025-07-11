@@ -19,11 +19,7 @@ const AdminCMSLayout = () => {
   const location = useLocation();
 
   const menuItems = [
-    { id: 'dashboard', name: 'Dashboard', icon: Home },
     { id: 'posts', name: 'Posts', icon: FileText },
-    { id: 'users', name: 'Users', icon: Users },
-    { id: 'analytics', name: 'Analytics', icon: BarChart3 },
-    { id: 'settings', name: 'Settings', icon: Settings },
   ];
 
   const handleLogout = () => {

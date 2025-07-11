@@ -38,13 +38,6 @@ CMS Blog adalah aplikasi web fullstack yang menangani semua aspek pengelolaan bl
 
 ### 💬 Sistem Komentar
 
-- Komentar pada artikel
-- Moderasi komentar
-- Reply system
-- Spam protection
-
-### 🔍 Pencarian & Filter
-
 ## 📋 Prerequisites
 
 Pastikan sistem Anda memiliki:
@@ -71,23 +64,12 @@ npm install
 
 ### 3. Setup Environment Variables
 
-Buat file `.env` di folder `api/`:
-
-```env
-PORT=5000
-MONGODB_URI=mongodb://localhost:27017/blog_cms
-REDIS_URL=redis://localhost:6379
-JWT_SECRET=your_jwt_secret_here
-NODE_ENV=development
-UPLOAD_PATH=uploads/
-```
-
 ### 4. Seed Database
 
 Jalankan perintah berikut untuk mengisi database dengan data sampel:
 
 ```bash
-node api/seedAll.js
+node apps/backend/seedAll.js
 ```
 
 ### 5. Jalankan Aplikasi
